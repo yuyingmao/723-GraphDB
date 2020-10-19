@@ -40,7 +40,7 @@ public class App {
             // internal id=node id; profile=number of neighbors; label="Node"
             for(Long nodeID:nodes.keySet()){
                 Map<String,Object> property=new HashMap<>();
-                property.put("profile",nodes.get(nodeID).size());
+                property.put("degree",nodes.get(nodeID).size());
                 inserter.createNode(nodeID,property,Label.label("Node"));
             }
             //create relationships, each relationship has structure:
