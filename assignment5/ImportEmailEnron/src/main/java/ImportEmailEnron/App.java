@@ -35,9 +35,9 @@ public class App {
         }
 
         try {
-            BatchInserter inserter = BatchInserters.inserter(new File("../db/EmailEnron"));
+            BatchInserter inserter = BatchInserters.inserter(new File("../db/Email-Enron"));
             //create nodes, each node has structure:
-            // internal id=node id; profile=number of neighbors; label="Node"
+            // internal id=node id; label="Node"
             for(Long nodeID:nodes.keySet()){
                 Map<String,Object> property=new HashMap<>();
                 inserter.createNode(nodeID,property,Label.label("Node"));
