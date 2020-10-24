@@ -1,0 +1,25 @@
+2020-10-23 23:52:24.782+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])
+2020-10-23 23:52:25.710+0000 WARN [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2020-10-23 23:52:25.887+0000 WARN [o.n.k.i.s.MetaDataStore] Counts store rebuild completed.
+2020-10-23 23:52:25.999+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1 to [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.b], from [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.a].
+2020-10-23 23:52:26.249+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])
+2020-10-24 00:02:19.681+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store D:\723assignments\5\gt\db\Email-Enron
+2020-10-24 00:02:19.683+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2020-10-24 00:02:19.686+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 00:02:31.587+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1 to [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.a], from [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.b].
+2020-10-24 00:02:31.645+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:10:04.345+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store D:\723assignments\5\gt\db\Email-Enron
+2020-10-24 02:10:04.347+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2020-10-24 02:10:04.350+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:10:16.603+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 2 to [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.a], from [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.b].
+2020-10-24 02:10:16.653+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:11:34.675+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store D:\723assignments\5\gt\db\Email-Enron
+2020-10-24 02:11:34.676+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2020-10-24 02:11:34.679+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:11:46.590+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 3 to [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.a], from [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.b].
+2020-10-24 02:11:46.640+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:18:05.015+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Selected RecordFormat:StandardV3_4[v0.A.9] record format from store D:\723assignments\5\gt\db\Email-Enron
+2020-10-24 02:18:05.017+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] Format not configured. Selected format from the store: RecordFormat:StandardV3_4[v0.A.9]
+2020-10-24 02:18:05.020+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
+2020-10-24 02:18:17.956+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 4 to [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.a], from [D:\723assignments\5\gt\db\Email-Enron\neostore.counts.db.b].
+2020-10-24 02:18:18.002+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\5\gt\db\Email-Enron])
