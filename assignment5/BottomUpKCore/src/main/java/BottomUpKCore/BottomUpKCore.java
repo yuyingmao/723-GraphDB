@@ -38,6 +38,7 @@ public class BottomUpKCore {
 		while(r.hasNext()){
 			total = ((Number) r.next().get("count(n)")).longValue();
 		}
+		r.close();
 		tx.close();
 
 		long current = 0;
@@ -53,6 +54,7 @@ public class BottomUpKCore {
 					total--;
 					dbOrig.setNodeProperty(node, "psi", current - 1);
 				}
+				nodesToDelete.close();
 				dbCopy.execute("MATCH (n) WITH n AS node, size((n) -- ()) AS ct WHERE ct < " + current + " DETACH DELETE node");
 				tx.success();
 				tx.close();

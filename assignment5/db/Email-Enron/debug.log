@@ -1,5 +1,5 @@
-2020-10-20 12:38:03.177+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])
-2020-10-20 12:38:04.069+0000 WARN [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
-2020-10-20 12:38:04.247+0000 WARN [o.n.k.i.s.MetaDataStore] Counts store rebuild completed.
-2020-10-20 12:38:04.380+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1 to [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.b], from [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.a].
-2020-10-20 12:38:04.583+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])
+2020-10-23 23:52:24.782+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])
+2020-10-23 23:52:25.710+0000 WARN [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2020-10-23 23:52:25.887+0000 WARN [o.n.k.i.s.MetaDataStore] Counts store rebuild completed.
+2020-10-23 23:52:25.999+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1 to [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.b], from [D:\723assignments\723-GraphDB\assignment5\db\Email-Enron\neostore.counts.db.a].
+2020-10-23 23:52:26.249+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment5\db\Email-Enron])

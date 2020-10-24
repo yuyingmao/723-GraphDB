@@ -35,13 +35,13 @@ public class CoreNumberUpperBoundEstimation {
 
 		Transaction tx=db.beginTx();
 
+		//a hashmap contains nodes' internal id and their 'psiest' value
 		Map<Long,Integer> vs=new HashMap<>();
 		//get all nodes that have a psiest between ki and ke
-		try(Result rs=db.execute("MATCH (n) WHERE "+ki+"<=n.psiest<="+ke+" RETURN ID(n),n.psiest")){
+		try(Result rs=db.execute("MATCH (v) WHERE "+ki+"<=v.psiest<="+ke+" RETURN ID(v),v.psiest")){
 			while(rs.hasNext()){
 				Map<String, Object> row = rs.next();
-				vs.put(Long.parseLong(String.valueOf(row.get("ID(n)"))),
-						Integer.parseInt(String.valueOf(row.get("n.psiest"))));
+				vs.put((long)row.get("ID(v)"),((Number)row.get("v.psiest")).intValue());
 			}
 		}
 
@@ -52,11 +52,11 @@ public class CoreNumberUpperBoundEstimation {
 			int vPsiest=vs.get(v);
 			//find neighbor(s) of v which has a core upper bound less than v
 			Map<Long,Integer> z=new HashMap<>();
-			try(Result rs=db.execute("MATCH (v)--(m) WHERE ID(v)="+v+" RETURN ID(m),m.psiest")){
+			try(Result rs=db.execute("MATCH (v)--(u) WHERE ID(v)="+v+" RETURN ID(u),u.psiest")){
 				while(rs.hasNext()){
 					Map<String, Object> row = rs.next();
-					long u=Long.parseLong(String.valueOf(row.get("ID(m)")));
-					int uPsiest=Integer.parseInt(String.valueOf(row.get("m.psiest")));
+					long u=(long)row.get("ID(u)");
+					int uPsiest=((Number)row.get("u.psiest")).intValue();
 					if(uPsiest<vPsiest)
 						z.put(u,uPsiest);
 				}
