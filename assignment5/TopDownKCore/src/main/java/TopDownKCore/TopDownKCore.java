@@ -102,28 +102,33 @@ public class TopDownKCore {
 
 		long total = numOfV;
 		long current = ki;
-		long totalBefore;
-
-		while(total > 0){
-			do {
-				totalBefore = total;
-				Transaction txOrig=db.beginTx();
-				Result nodesToDelete = dbCopy.execute("MATCH (n) WITH ID(n) AS index, size((n) -- ()) AS ct, n.deposit AS p WHERE ct+p < " + current + " RETURN index");
-				while (nodesToDelete.hasNext()) {
-					long node = ((Number) nodesToDelete.next().get("index")).longValue();
-					total--;
-					db.getNodeById(node).setProperty("psi",current-1);
+		while(total>0){
+			while(true){
+				long totalBefore=total;
+				Transaction txCopy=dbCopy.beginTx();
+				int numOfNodeToDelete=0;
+				try(Result rs=dbCopy.execute("MATCH (v) WITH v, size((v)--()) as degree WHERE degree<"+current+" RETURN ID(v)")){
+					while (rs.hasNext()){
+						numOfNodeToDelete++;
+						dbCopy.execute("MATCH (n) WHERE ID(n)="+rs.next().get("ID(v)")+" DETACH DELETE n");
+						txCopy.success();
+					}
+				}
+				txCopy.close();
+				total=total-numOfNodeToDelete;
+				if(totalBefore==total)
+					break;
+			}
+			Transaction txCopy=dbCopy.beginTx();
+			Transaction txOrig=db.beginTx();
+			try(Result rs=dbCopy.execute("MATCH (n) RETURN ID(n)")){
+				while (rs.hasNext()){
+					db.getNodeById((long)rs.next().get("ID(n)")).setProperty("psi",current);
 					txOrig.success();
 				}
-				nodesToDelete.close();
-				txOrig.close();
-
-				Transaction tx = dbCopy.beginTx();
-				dbCopy.execute("MATCH (n) WITH n AS node, size((n) -- ()) AS ct, n.deposit AS p WHERE ct+p < " + current + " DETACH DELETE node");
-				tx.success();
-				tx.close();
-
-			} while (total != totalBefore);
+			}
+			txOrig.close();
+			txCopy.close();
 			if(current<ke)
 				current++;
 		}
@@ -131,10 +136,6 @@ public class TopDownKCore {
 	}
 
 	public static void main(String[] args) throws Exception {
-		/***final String neo4jFolder = "D:/723assignments/5/db/Email-Enron",
-				neo4jFolderCopy = "D:/723assignments/5/copy/db/Email-Enron";
-		final int kmin = Integer.parseInt("50"),
-				step = Integer.parseInt("1");***/
 		final String neo4jFolder = args[0],
 				neo4jFolderCopy = args[1];
 		final int kmin = Integer.parseInt(args[2]),

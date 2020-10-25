@@ -23,18 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="686dd72c-461b-48c9-920e-3572d261421a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CoreNumberUpperBoundEstimation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoreNumberUpperBoundEstimation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +167,14 @@
       <option name="presentableId" value="Default" />
       <updated>1603498412258</updated>
     </task>
+    <task id="LOCAL-00001" summary="add GroundTruth database;&#10;still working on Q3">
+      <created>1603506714497</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603506714497</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,47 +187,56 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add GroundTruth database;&#10;still working on Q3" />
+    <option name="LAST_COMMIT_MESSAGE" value="add GroundTruth database;&#10;still working on Q3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1010" y="350" key="FileChooserDialogImpl" timestamp="1603505335477">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1010" y="350" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603505335477" />
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603504357957">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603506730236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603504357957" />
-    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603504357957">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
+    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603506730236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603504357957" />
-    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603504357957">
+    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
+    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603506730236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603504357957" />
-    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603504357957">
+    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603506730236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603504357957" />
-    <state width="1340" height="276" key="GridCell.Tab.1.bottom" timestamp="1603503941027">
+    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
+    <state width="1340" height="276" key="GridCell.Tab.1.bottom" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="276" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603503941027" />
-    <state width="1340" height="276" key="GridCell.Tab.1.center" timestamp="1603503941027">
+    <state width="1340" height="276" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730233" />
+    <state width="1340" height="276" key="GridCell.Tab.1.center" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="276" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603503941027" />
-    <state width="1340" height="276" key="GridCell.Tab.1.left" timestamp="1603503941027">
+    <state width="1340" height="276" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730233" />
+    <state width="1340" height="276" key="GridCell.Tab.1.left" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="276" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603503941027" />
-    <state width="1340" height="276" key="GridCell.Tab.1.right" timestamp="1603503941027">
+    <state width="1340" height="276" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730233" />
+    <state width="1340" height="276" key="GridCell.Tab.1.right" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="276" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603503941027" />
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603504357940">
+    <state width="1340" height="276" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730233" />
+    <state x="573" y="294" key="Vcs.Push.Dialog.v2" timestamp="1603506716489">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603504357940" />
+    <state x="573" y="294" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603506716489" />
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603506432073">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603506432073" />
   </component>
 </project>
