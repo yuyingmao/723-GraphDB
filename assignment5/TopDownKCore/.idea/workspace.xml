@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="686dd72c-461b-48c9-920e-3572d261421a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603506714497</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix BottomUpKCore;&#10;finish TopDownKCore;&#10;update databases">
+      <created>1603597648304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603597648304</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update databases">
+      <created>1603597688111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603597688111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,29 +203,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add GroundTruth database;&#10;still working on Q3" />
-    <option name="LAST_COMMIT_MESSAGE" value="add GroundTruth database;&#10;still working on Q3" />
+    <MESSAGE value="fix BottomUpKCore;&#10;finish TopDownKCore;&#10;update databases" />
+    <MESSAGE value="update databases" />
+    <option name="LAST_COMMIT_MESSAGE" value="update databases" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1010" y="350" key="FileChooserDialogImpl" timestamp="1603505335477">
+    <state x="1010" y="350" key="FileChooserDialogImpl" timestamp="1603597516073">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1010" y="350" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603505335477" />
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603506730236">
+    <state x="1010" y="350" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603597516073" />
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603597955436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
-    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603506730236">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
+    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603597955436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
-    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603506730236">
+    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
+    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603597955436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
-    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603506730236">
+    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603597955436">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730236" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
     <state width="1340" height="276" key="GridCell.Tab.1.bottom" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -230,13 +244,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1340" height="276" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603506730233" />
-    <state x="573" y="294" key="Vcs.Push.Dialog.v2" timestamp="1603506716489">
+    <state x="573" y="294" key="Vcs.Push.Dialog.v2" timestamp="1603597689965">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="573" y="294" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603506716489" />
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603506432073">
+    <state x="573" y="294" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603597689965" />
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603597480209">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603506432073" />
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603597480209" />
   </component>
 </project>
