@@ -21,7 +21,6 @@ public class BottomUpKCore {
 		GraphDatabaseService dbCopy = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(new File(neo4jFolderCopy))
 				.setConfig(GraphDatabaseSettings.pagecache_memory, "512M").newGraphDatabase();
 
-		// TODO: Your code here!!!!
 		int total=((Number)dbCopy.execute("MATCH (n) RETURN COUNT(n)").next().get("COUNT(n)")).intValue();
 		int current=0;
 		while(total>0){
@@ -50,7 +49,6 @@ public class BottomUpKCore {
 			current++;
 		}
 
-		// TODO: End of your code.
 		dbCopy.shutdown();
 		dbOrig.shutdown();
 

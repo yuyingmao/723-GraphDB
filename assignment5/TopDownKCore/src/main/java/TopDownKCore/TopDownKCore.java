@@ -11,7 +11,6 @@ import org.neo4j.unsafe.batchinsert.BatchInserter;
 import org.neo4j.unsafe.batchinsert.BatchInserters;
 
 public class TopDownKCore {
-	public static Set<Long> neigh = new HashSet<>();
 
 	private static Map<Long,Integer> sortByCoreUpperBound(Map<Long,Integer> hm){
 		// Create a list from elements of HashMap
@@ -96,7 +95,7 @@ public class TopDownKCore {
 		inserter.shutdown();
 	}
 
-	private static void BottomUpKCore(GraphDatabaseService db,String neo4jFolderCopy,int ki,int ke,int numOfV) throws IOException {
+	private static void BottomUpKCore(GraphDatabaseService db,String neo4jFolderCopy,int ki,int ke,int numOfV){
 		GraphDatabaseService dbCopy = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(new File(neo4jFolderCopy))
 				.setConfig(GraphDatabaseSettings.pagecache_memory, "512M").newGraphDatabase();
 
@@ -146,13 +145,6 @@ public class TopDownKCore {
 		GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(new File(neo4jFolder))
 				.setConfig(GraphDatabaseSettings.pagecache_memory, "512M").newGraphDatabase();
 		
-		// TODO: Your code here!!!!
-		// At the beginning, each node will have psi=null, psiest=degree and deposit=0. In each step, you must start with the nodes whose psiest is between ki and ke,
-		//		where ke is the max degree at the beginning. You must update both ke and ki in each step.
-		//	The upper bound refinement is generally the bottleneck of the algorithm; limit the upper bound refinement to no more than 10,000 nodes each time.
-		//	The auxiliary folder must be removed in every step and, if there are enough nodes, use it to copy the relevant subgraph and compute the core numbers in a 
-		//		bottom-up fashion. Note that you must copy the deposits of the nodes as well.
-		//	When you set the psi property of a node, you should remove its psiest property.
 		int ke=((Number)db.execute("MATCH (v) WITH size((v)--()) as degree RETURN MAX(degree)").next().get("MAX(degree)")).intValue();
 		int ki=Math.max(kmin,ke-step);
 
@@ -229,8 +221,6 @@ public class TopDownKCore {
 					System.out.printf( "%s = %s%n", key, row.get( key ) );
 			}
 		}
-		
-		// TODO: End of your code.
 		
 		db.shutdown();
 

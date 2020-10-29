@@ -77,10 +77,6 @@ public class DetectTopKSpreaders {
 		
 		FileUtils.deleteDirectory(new File(neo4jFolderCopy));
 		
-		// TODO: Your code here!!!!
-		// A node can have either its psi or psiest property set, use COALESCE to select the one that is set.
-		// Copy the degeneracy core from the original to the auxiliary database.
-		// Compute the eigenvector centrality for each node and store its value in property x. You should also use an auxiliary property xlast.
 		GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(new File(neo4jFolder))
 				.setConfig(GraphDatabaseSettings.pagecache_memory, "512M").newGraphDatabase();
 
@@ -147,7 +143,6 @@ public class DetectTopKSpreaders {
 		txCopy.close();
 
 		dbCopy.shutdown();
-		// TODO: End of your code.
 		
 		db.shutdown();
 		

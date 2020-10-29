@@ -51,18 +51,13 @@ public class ComputeDMP {
 		return temp;
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args){
 		final String neo4jFolder = args[0];
 
 		System.out.println(new Date() + " -- Started");
 		
 		GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(new File(neo4jFolder))
 				.setConfig(GraphDatabaseSettings.pagecache_memory, "512M").newGraphDatabase();
-		
-		// TODO: Your code here!!!!
-		// A node can have either its psi or psiest property set, use COALESCE to select the one that is set.
-		// Recall that you must compute realistic ranks, so you must keep track of all the nodes that have repeated values to provide their ranks.
-		// You must set properties rankc and rankd for each node.
 
 		//nodesRankC=Map<nodeID,<coreNumber,degree>>
 		Map<Long,Pair<Integer,Integer>> nodesRankC=new HashMap<>();
@@ -152,8 +147,6 @@ public class ComputeDMP {
 
 			currentRank=endRank+1;
 		}
-
-		// TODO: End of your code.
 		
 		db.shutdown();
 		

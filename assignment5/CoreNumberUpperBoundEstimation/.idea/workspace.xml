@@ -22,7 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc19bed0-acb3-43f0-8618-cdb3c90bf737" name="Default Changelist" comment="remove 'degree' from node's property;&#10;change db's name to Email-Enron;&#10;finish Q2" />
+    <list default="true" id="fc19bed0-acb3-43f0-8618-cdb3c90bf737" name="Default Changelist" comment="remove 'degree' from node's property;&#10;change db's name to Email-Enron;&#10;finish Q2">
+      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputeNodeInfluence/src/main/java/ComputeNodeInfluence/ComputeNodeInfluence.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputeNodeInfluence/src/main/java/ComputeNodeInfluence/ComputeNodeInfluence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TopDownKCore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TopDownKCore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TopDownKCore/src/main/java/TopDownKCore/TopDownKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TopDownKCore/src/main/java/TopDownKCore/TopDownKCore.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +41,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -154,22 +162,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="close Result object in BottomUpKCore;&#10;minor change in CoreNumberUpperBoundEstimation" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603498281482">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603936654614">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603498281482" />
-    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603498281482">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603936654614" />
+    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603936654614">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603498281482" />
-    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603498281482">
+    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603936654614" />
+    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603936654614">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603498281482" />
-    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603498281482">
+    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603936654614" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603936654614">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603498281482" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603936654614" />
     <state width="1340" height="276" key="GridCell.Tab.1.bottom" timestamp="1603198710830">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -190,9 +198,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="664" y="290" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603498267287" />
-    <state x="714" y="272" width="672" height="677" key="run.anything.popup" timestamp="1603498189088">
+    <state x="714" y="272" width="672" height="677" key="run.anything.popup" timestamp="1603936650859">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="714" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603498189088" />
+    <state x="714" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603936650859" />
   </component>
 </project>

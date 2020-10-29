@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="686dd72c-461b-48c9-920e-3572d261421a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomUpKCore/src/main/java/BottomUpKCore/BottomUpKCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComputeNodeInfluence/src/main/java/ComputeNodeInfluence/ComputeNodeInfluence.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ComputeNodeInfluence/src/main/java/ComputeNodeInfluence/ComputeNodeInfluence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TopDownKCore/TopDownKCore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BottomUpKCore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -212,22 +215,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1010" y="350" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603597516073" />
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603597955436">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom" timestamp="1603936577102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
-    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603597955436">
+    <state width="1340" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1603936577102" />
+    <state width="1340" height="223" key="GridCell.Tab.0.center" timestamp="1603936577102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
-    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603597955436">
+    <state width="1340" height="223" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1603936577102" />
+    <state width="1340" height="223" key="GridCell.Tab.0.left" timestamp="1603936577102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
-    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603597955436">
+    <state width="1340" height="223" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1603936577102" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right" timestamp="1603936577102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603597955436" />
+    <state width="1340" height="223" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603936577102" />
     <state width="1340" height="276" key="GridCell.Tab.1.bottom" timestamp="1603506730233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -248,9 +251,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="573" y="294" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1603597689965" />
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603597480209">
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup" timestamp="1603936574465">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603597480209" />
+    <state x="814" y="251" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1603936574465" />
   </component>
 </project>
