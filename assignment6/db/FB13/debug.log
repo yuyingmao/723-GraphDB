@@ -1,0 +1,5 @@
+2020-11-09 15:56:16.431+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Starting BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment6\db\FB13])
+2020-11-09 15:56:18.249+0000 WARN [o.n.k.i.s.MetaDataStore] Missing counts store, rebuilding it.
+2020-11-09 15:56:19.266+0000 WARN [o.n.k.i.s.MetaDataStore] Counts store rebuild completed.
+2020-11-09 15:56:19.373+0000 INFO [o.n.k.i.s.c.CountsTracker] Rotated counts store at transaction 1 to [D:\723assignments\723-GraphDB\assignment6\db\FB13\neostore.counts.db.b], from [D:\723assignments\723-GraphDB\assignment6\db\FB13\neostore.counts.db.a].
+2020-11-09 15:56:19.613+0000 INFO [o.n.u.b.i.BatchInserterImpl] Thread[main,5,main] Clean shutdown on BatchInserter(EmbeddedBatchInserter[D:\723assignments\723-GraphDB\assignment6\db\FB13])
