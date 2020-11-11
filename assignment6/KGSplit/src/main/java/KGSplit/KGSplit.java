@@ -56,7 +56,8 @@ public class KGSplit {
 				long sID=triple.getKey();
 				long oID=triple.getValue();
 				//TODO: Check that s and o will not have a degree of zero in training => If so, go to next triple.
-				if(){
+				tx=db.beginTx();
+				if(db.getNodeById(sID).getDegree()>1&&db.getNodeById(oID).getDegree()>1){
 					//update total number of subjects and objects
 					long newTotalNumOfSubjects=totalNumOfSubjects;
 					long newTotalNumOfObjects=totalNumOfObjects;
@@ -75,17 +76,16 @@ public class KGSplit {
 							&& Math.abs(avgOutdegree-newAvgOutdegree)<toleranceThreshold){
 						long pID=(long)db.execute("MATCH (s)-[p]->(o) WHERE ID(s)="+sID
 								+" AND ID(o)="+oID+" RETURN ID(p)").next().get("ID(p)");
-						tx=db.beginTx();
 						//split Grest to validation or test half and half
 						if(cnt%2==0)
 							db.getRelationshipById(pID).setProperty("split","Validation");
 						else
 							db.getRelationshipById(pID).setProperty("split","Test");
 						tx.success();
-						tx.close();
 						cnt++;
 					}
 				}
+				tx.close();
 			}
 		}
 		
