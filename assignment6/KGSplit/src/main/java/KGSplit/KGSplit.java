@@ -18,7 +18,7 @@ public class KGSplit {
 		
 		GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabase(new File(neo4jFolder));
 
-		//initially, set all relationships to have a property "split"="Training"
+		//Gtr=G; Grest={}
 		Transaction tx=db.beginTx();
 		db.execute("MATCH ()-[p]->() SET p.split='Training'");
 		tx.success();
@@ -32,53 +32,69 @@ public class KGSplit {
 		}
 		tx.close();
 
+		//foreach p in P(G) do
 		for(String p:predicates){
-			//a number used for splitting Grest into half
-			long cnt=0;
-			//get triples, subjects, and objects have this predicate
-			long totalNumOfTriples=(long) db.execute("MATCH ()-[p:`$pred`]->() RETURN COUNT(p) AS c".replace("$pred", p)).next().get("c");
-			long totalNumOfSubjects=(long)db.execute("MATCH (s)-[p:`$pred`]->() RETURN COUNT(DISTINCT s) AS c".replace("$pred", p)).next().get("c");
-			long totalNumOfObjects=(long)db.execute("MATCH ()-[p:`$pred`]->(o) RETURN COUNT(DISTINCT o) AS c".replace("$pred", p)).next().get("c");
+			// get count of subjects, objects, and triples in training
+			long subjectsInTraining = 0, objectsInTraining = 0, triplesInTraining = 0;
+			try(Result rs=db.execute("MATCH (s)-[p:`$pred` {split:'Training'}]->(o) RETURN COUNT(DISTINCT s) AS sCount, COUNT(DISTINCT o) AS oCount, COUNT(p) AS pCount".replace("$pred", p))){
+				if(rs.hasNext()) {
+					Map<String, Object> row = rs.next();
+					subjectsInTraining=(long)row.get("sCount");
+					objectsInTraining=(long)row.get("oCount");
+					triplesInTraining=(long)row.get("pCount");
+				}
+			}
 			//calculate original average indegree and outdegree
-			double avgIndegree=(double)totalNumOfTriples/totalNumOfObjects;
-			double avgOutdegree=(double)totalNumOfTriples/totalNumOfSubjects;
+			double avgIndegree=(double)triplesInTraining/objectsInTraining;
+			double avgOutdegree=(double)triplesInTraining/subjectsInTraining;
 
 			try(Result rs=db.execute("MATCH (s)-[p:`$pred`]->(o) RETURN ID(s),ID(o),ID(p)".replace("$pred", p))){
+				//a number used for splitting Grest into half
+				long cnt=0;
+				//foreach (s,p,o) in G do
 				while(rs.hasNext()){
 					Map<String,Object> row=rs.next();
 					long sID=(long)row.get("ID(s)");
 					long oID=(long)row.get("ID(o)");
-					long pID=(long)row.get("ID(p)");
-
-					tx=db.beginTx();
-					if(db.getNodeById(sID).getDegree()>1&&db.getNodeById(oID).getDegree()>1){
-						//update total number of subjects and objects
-						long newTotalNumOfSubjects=totalNumOfSubjects;
-						long newTotalNumOfObjects=totalNumOfObjects;
-						try(Result result=db.execute("MATCH (s)-[p:`$pred`]->(o) WHERE ID(s)="+sID+" AND ID(o)<>"+oID+" RETURN ID(o)".replace("$pred", p))){
-							if(!result.hasNext())
-								newTotalNumOfSubjects-=1;
-						}
-						try(Result result=db.execute("MATCH (s)-[p:`$pred`]->(o) WHERE ID(s)<>"+sID+" AND ID(o)="+oID+" RETURN ID(s)".replace("$pred", p))){
-							if(!result.hasNext())
-								newTotalNumOfObjects-=1;
-						}
+					int sDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)="+sID+" RETURN COUNT(p) AS degree").next().get("degree")).intValue();
+					int oDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)="+oID+" RETURN COUNT(p) AS degree").next().get("degree")).intValue();
+					//if E(G'tr)=E(G) then
+					if(sDegreeInTraining>1 && oDegreeInTraining>1){
+						//update count of subjects and objects
+						long newSubjectsInTraining=subjectsInTraining;
+						long newObjectsInTraining=objectsInTraining;
+						int sDegreeInP=((Number)db.execute("MATCH (s)-[p:`$pred` {split:'Training'}]->() WHERE ID(s)="+sID+" RETURN COUNT(p) AS degree".replace("$pred", p)).next().get("degree")).intValue();
+						if(sDegreeInP==1)
+							newSubjectsInTraining-=1;
+						int oDegreeInP=((Number)db.execute("MATCH ()-[p:`$pred` {split:'Training'}]->(o) WHERE ID(o)="+oID+" RETURN COUNT(p) AS degree".replace("$pred", p)).next().get("degree")).intValue();
+						if(oDegreeInP==1)
+							newObjectsInTraining-=1;
 						//calculate new average indegree and outdegree
-						double newAvgIndegree=(double)(totalNumOfTriples-1)/newTotalNumOfObjects;
-						double newAvgOutdegree=(double)(totalNumOfTriples-1)/newTotalNumOfSubjects;
-						if(Math.abs(avgIndegree-newAvgIndegree)<toleranceThreshold
-								&& Math.abs(avgOutdegree-newAvgOutdegree)<toleranceThreshold){
+						double newAvgIndegree=(double)(triplesInTraining-1)/newObjectsInTraining;
+						double newAvgOutdegree=(double)(triplesInTraining-1)/newSubjectsInTraining;
+						if(Math.abs(avgIndegree-newAvgIndegree)<toleranceThreshold && Math.abs(avgOutdegree-newAvgOutdegree)<toleranceThreshold){
+							long pID=(long)row.get("ID(p)");
+
 							//split Grest to validation or test half and half
+							tx=db.beginTx();
 							if(cnt%2==0)
 								db.getRelationshipById(pID).setProperty("split","Validation");
 							else
 								db.getRelationshipById(pID).setProperty("split","Test");
 							tx.success();
+							tx.close();
+
 							cnt++;
+
+							triplesInTraining-=1;
+							subjectsInTraining=newSubjectsInTraining;
+							objectsInTraining=newObjectsInTraining;
 						}
 					}
-					tx.close();
 				}
+			}catch (Exception e){
+				tx.close();
+				e.printStackTrace();
 			}
 		}
 		
