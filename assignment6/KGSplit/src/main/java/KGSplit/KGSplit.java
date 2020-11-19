@@ -48,6 +48,7 @@ public class KGSplit {
 			double avgIndegree=(double)triplesInTraining/objectsInTraining;
 			double avgOutdegree=(double)triplesInTraining/subjectsInTraining;
 
+			tx=db.beginTx();
 			try(Result rs=db.execute("MATCH (s)-[p:`$pred`]->(o) RETURN ID(s),ID(o),ID(p)".replace("$pred", p))){
 				//a number used for splitting Grest into half
 				long cnt=0;
@@ -56,17 +57,17 @@ public class KGSplit {
 					Map<String,Object> row=rs.next();
 					long sID=(long)row.get("ID(s)");
 					long oID=(long)row.get("ID(o)");
-					int sDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)="+sID+" RETURN COUNT(p) AS degree").next().get("degree")).intValue();
-					int oDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)="+oID+" RETURN COUNT(p) AS degree").next().get("degree")).intValue();
+					int sDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)=$e RETURN COUNT(p) AS degree".replace("$e",String.valueOf(sID))).next().get("degree")).intValue();
+					int oDegreeInTraining=((Number)db.execute("MATCH (e)-[p {split:'Training'}]-() WHERE ID(e)=$e RETURN COUNT(p) AS degree".replace("$e",String.valueOf(oID))).next().get("degree")).intValue();
 					//if E(G'tr)=E(G) then
 					if(sDegreeInTraining>1 && oDegreeInTraining>1){
 						//update count of subjects and objects
 						long newSubjectsInTraining=subjectsInTraining;
 						long newObjectsInTraining=objectsInTraining;
-						int sDegreeInP=((Number)db.execute("MATCH (s)-[p:`$pred` {split:'Training'}]->() WHERE ID(s)="+sID+" RETURN COUNT(p) AS degree".replace("$pred", p)).next().get("degree")).intValue();
+						int sDegreeInP=((Number)db.execute("MATCH (s)-[p:`$pred` {split:'Training'}]->() WHERE ID(s)=$s RETURN COUNT(p) AS degree".replace("$s",String.valueOf(sID)).replace("$pred", p)).next().get("degree")).intValue();
 						if(sDegreeInP==1)
 							newSubjectsInTraining-=1;
-						int oDegreeInP=((Number)db.execute("MATCH ()-[p:`$pred` {split:'Training'}]->(o) WHERE ID(o)="+oID+" RETURN COUNT(p) AS degree".replace("$pred", p)).next().get("degree")).intValue();
+						int oDegreeInP=((Number)db.execute("MATCH ()-[p:`$pred` {split:'Training'}]->(o) WHERE ID(o)=$o RETURN COUNT(p) AS degree".replace("$o",String.valueOf(oID)).replace("$pred", p)).next().get("degree")).intValue();
 						if(oDegreeInP==1)
 							newObjectsInTraining-=1;
 						//calculate new average indegree and outdegree
@@ -76,13 +77,12 @@ public class KGSplit {
 							long pID=(long)row.get("ID(p)");
 
 							//split Grest to validation or test half and half
-							tx=db.beginTx();
+
 							if(cnt%2==0)
 								db.getRelationshipById(pID).setProperty("split","Validation");
 							else
 								db.getRelationshipById(pID).setProperty("split","Test");
 							tx.success();
-							tx.close();
 
 							cnt++;
 
@@ -96,6 +96,7 @@ public class KGSplit {
 				tx.close();
 				e.printStackTrace();
 			}
+			tx.close();
 		}
 		
 		db.shutdown();
