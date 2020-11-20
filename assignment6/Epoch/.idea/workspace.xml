@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edda7f2e-fa63-4975-82b7-07641ca0f8a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KGSplit/src/main/java/KGSplit/KGSplit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../KGSplit/src/main/java/KGSplit/KGSplit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../db/FB13/neostore.counts.db.b" beforeDir="false" afterPath="$PROJECT_DIR$/../db/FB13/neostore.counts.db.b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../db/WN18/neostore.labelscanstore.db" beforeDir="false" afterPath="$PROJECT_DIR$/../db/WN18/neostore.labelscanstore.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Epoch/Epoch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Epoch/Epoch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +125,14 @@
       <option name="presentableId" value="Default" />
       <updated>1605732935196</updated>
     </task>
+    <task id="LOCAL-00001" summary="done with Q1: KGSplit;&#10;finish Q3, still need to working on optimization.">
+      <created>1605822726356</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605822726356</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,39 +147,47 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="done with Q1: KGSplit;&#10;finish Q3, still need to working on optimization." />
+    <option name="LAST_COMMIT_MESSAGE" value="done with Q1: KGSplit;&#10;finish Q3, still need to working on optimization." />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1268" height="221" key="GridCell.Tab.0.bottom" timestamp="1605822527356">
+    <state width="1268" height="221" key="GridCell.Tab.0.bottom" timestamp="1605823531958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605822527356" />
-    <state width="1268" height="221" key="GridCell.Tab.0.center" timestamp="1605822527356">
+    <state width="1268" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531958" />
+    <state width="1268" height="221" key="GridCell.Tab.0.center" timestamp="1605823531958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="221" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605822527356" />
-    <state width="1268" height="221" key="GridCell.Tab.0.left" timestamp="1605822527356">
+    <state width="1268" height="221" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531958" />
+    <state width="1268" height="221" key="GridCell.Tab.0.left" timestamp="1605823531958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="221" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605822527356" />
-    <state width="1268" height="221" key="GridCell.Tab.0.right" timestamp="1605822527356">
+    <state width="1268" height="221" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531958" />
+    <state width="1268" height="221" key="GridCell.Tab.0.right" timestamp="1605823531958">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="221" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605822527356" />
-    <state width="1268" height="274" key="GridCell.Tab.1.bottom" timestamp="1605819644114">
+    <state width="1268" height="221" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531958" />
+    <state width="1268" height="274" key="GridCell.Tab.1.bottom" timestamp="1605823531956">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605819644114" />
-    <state width="1268" height="274" key="GridCell.Tab.1.center" timestamp="1605819644114">
+    <state width="1268" height="274" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531956" />
+    <state width="1268" height="274" key="GridCell.Tab.1.center" timestamp="1605823531956">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="274" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605819644114" />
-    <state width="1268" height="274" key="GridCell.Tab.1.left" timestamp="1605819644114">
+    <state width="1268" height="274" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531956" />
+    <state width="1268" height="274" key="GridCell.Tab.1.left" timestamp="1605823531956">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="274" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605819644114" />
-    <state width="1268" height="274" key="GridCell.Tab.1.right" timestamp="1605819644114">
+    <state width="1268" height="274" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531956" />
+    <state width="1268" height="274" key="GridCell.Tab.1.right" timestamp="1605823531956">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1268" height="274" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605819644114" />
+    <state width="1268" height="274" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605823531956" />
+    <state x="825" y="380" key="Vcs.Push.Dialog.v2" timestamp="1605822729612">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="825" y="380" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1605822729612" />
     <state x="870" y="283" width="672" height="677" key="run.anything.popup" timestamp="1605822527350">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

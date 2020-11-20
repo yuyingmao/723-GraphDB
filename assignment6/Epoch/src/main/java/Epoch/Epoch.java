@@ -71,7 +71,7 @@ public class Epoch {
 				spoDistanceP=Euclidean(dim,spEmbedding,pEmbedding,opEmbedding);
 			}
 			//currently is using: gamma-d(s+p,o)+d(sp+p,op)
-			if(gamma-spoDistance+spoDistanceP>0){
+			if(gamma+spoDistance-spoDistanceP>0){
 				for(int i=0;i<dim;i++){
 					double si=sEmbedding[i];
 					double pi=pEmbedding[i];
